@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+	<_name>App Icons for UE4</_name>
+	<id>andriusp.ue4.icons</id>
+	<dependency type="executable" location="extensions">appicons4ue4.py</dependency>
+    <param name="android" type="bool" gui-text="Export Android icons">true</param>
+    <param name="ios" type="bool" gui-text="Export iOS icons">false</param>
+    <param name="output_path" type="path" mode="folder" gui-text="Output folder"></param>
+	<effect needs-live-preview="false">
+	<object-type>all</object-type>
+		<effects-menu>
+			<submenu _name="Export"/>
+		</effects-menu>
+	</effect>
+	<script>
+		<command reldir="extensions" interpreter="python">appicons4ue4.py</command>
+	</script>
+</inkscape-extension>
